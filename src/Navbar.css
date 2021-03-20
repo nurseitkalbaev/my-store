@@ -4,9 +4,13 @@
 .navbar__container {
   display: flex;
   align-items: center;
-  background-color: var(--primary);
+  color: white;
+  background-color: #0f1932;
   height: 40px;
   margin: 0;
+}
+.navbar__category button {
+  color: white;
 }
 
 .navbar__category {
@@ -18,5 +22,5 @@
   cursor: pointer;
 }
 .navbar__category button span:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--primary);
 }
