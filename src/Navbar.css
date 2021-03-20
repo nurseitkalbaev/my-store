@@ -1,0 +1,22 @@
+.navbar {
+  margin-top: 30px;
+}
+.navbar__container {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+  height: 40px;
+  margin: 0;
+}
+
+.navbar__category {
+  margin: 0px;
+  margin-left: 20px;
+  /* border: 1px solid black; */
+}
+.navbar__category:hover {
+  cursor: pointer;
+}
+.navbar__category button span:hover {
+  border-bottom: 2px solid black;
+}
