@@ -1,0 +1,10 @@
+.cart__ad img {
+  width: 300px;
+  z-index: 2;
+  margin: 10px;
+}
+
+.cart__title {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}

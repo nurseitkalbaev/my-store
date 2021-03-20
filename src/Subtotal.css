@@ -1,0 +1,8 @@
+.subtotal > button {
+  background-color: #ff0000;
+  color: white;
+  font-size: 10px;
+}
+.subtotal > button:hover {
+  background-color: #da0909;
+}
