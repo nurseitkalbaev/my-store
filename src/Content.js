@@ -1,59 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Content.css";
 import Product from "./Product";
+import { ProductsContext } from "./ProductsContext";
+import { Link } from "react-router-dom";
 
 function Content() {
+  const [state] = useContext(ProductsContext);
+
   return (
     <div className="content">
       <div className="content__container">
-        <div className="content__row">
-          <Product
-            id="1"
-            title="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
-            price={109.95}
-            category="men clothing"
-            image="http://demo35067.appliances.dev.rwsgateway.com/fe-dev-test-files/m_bag_01.jpg"
-          />
-          <Product
-            id="2"
-            title="Mens Casual Premium Slim Fit T-Shirts"
-            price={22.3}
-            category="men clothing"
-            image="http://demo35067.appliances.dev.rwsgateway.com/fe-dev-test-files/m_shirt_01.jpg"
-          />
-        </div>
-        <div className="content__row">
-          <Product
-            id="3"
-            title="Mens Cotton Jacket"
-            price="55.99"
-            category="men clothing"
-            image="http://demo35067.appliances.dev.rwsgateway.com/fe-dev-test-files/m_jacket_02.jpg"
-          />
-          <Product
-            id="4"
-            title="Mens Casual Slim Fit"
-            price="15.99"
-            category="men clothing"
-            image="http://demo35067.appliances.dev.rwsgateway.com/fe-dev-test-files/m_shirt_02.jpg"
-          />
-          <Product
-            id="5"
-            title="John Hardy Women's Legends Naga Gold Silver Dragon Station Chain Bracelet"
-            price="695"
-            category="jewelery"
-            image="http://demo35067.appliances.dev.rwsgateway.com/fe-dev-test-files/jewlery_04.jpg"
-          />
-        </div>
-        <div className="content__row">
-          <Product
-            id="9"
-            title="WD 2TB Elements Portable External Hard Drive - USB 3.0"
-            price="64"
-            category="electronics"
-            image="http://demo35067.appliances.dev.rwsgateway.com/fe-dev-test-files/electronic_01.jpg"
-          />
-        </div>
+        {state.products
+          .filter((p) => p.title.toUpperCase().includes(state.searchText))
+          .map(({ title, id, category, price, image }) => {
+            return (
+              <Link className="content__link" key={id} to={`/product/${id}`}>
+                <div className="content__product">
+                  <Product
+                    key={id}
+                    id={id}
+                    title={title}
+                    price={price}
+                    category={category}
+                    image={image}
+                  />
+                </div>
+              </Link>
+            );
+          })}
       </div>
     </div>
   );

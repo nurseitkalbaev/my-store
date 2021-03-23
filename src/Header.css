@@ -21,8 +21,6 @@
 .header__search {
   display: flex;
   align-items: center;
-  border-radius: 16px;
-  border: 1px solid black;
   margin: 0 auto;
   height: 35px;
   width: 80%;
@@ -50,16 +48,12 @@
   justify-content: center;
 }
 
-/* Tablets */
-@media (max-width: 768px) {
-}
-
 /* Mobile */
 @media (max-width: 680px) {
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.4fr 1.2fr;
+    grid-template-rows: 0.4fr 0.2fr;
     grid-template-areas:
       "logo menu"
       "logo menu"
@@ -73,9 +67,12 @@
   }
   .header__logo {
     grid-area: logo;
+    width: 170px;
   }
   .header__search {
     grid-area: search;
+    margin-top: 0;
+    height: 30px;
   }
   .header__menu {
     grid-area: menu;

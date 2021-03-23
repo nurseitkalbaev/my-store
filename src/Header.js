@@ -1,13 +1,9 @@
 import React from "react";
 import "./Header.css";
-import {
-  Search,
-  ShoppingCart,
-  FavoriteBorder,
-  Person,
-} from "@material-ui/icons/";
+import { ShoppingCart, FavoriteBorder, Person } from "@material-ui/icons/";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+import Search from "./Search";
 
 function Header() {
   return (
@@ -21,10 +17,7 @@ function Header() {
       </Link>
 
       <div className="header__search mt">
-        <input className="header__input" type="text" />
-        <Button className=".header__searchIconButton">
-          <Search className="header__searchIcon" />
-        </Button>
+        <Search />
       </div>
 
       <div className="header__menu mt">

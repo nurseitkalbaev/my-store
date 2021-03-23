@@ -5,6 +5,10 @@ import Subtotal from "./Subtotal";
 function Cart() {
   return (
     <div className="cart">
+      <div className="cart__title">
+        <h2>Shopping basket is here</h2>
+      </div>
+
       <div className="cart__checkout">
         <Subtotal />
         <div className="cart__ad">
@@ -13,9 +17,6 @@ function Cart() {
             alt="safe checkout"
           />
         </div>
-      </div>
-      <div className="cart__title">
-        <h2>Shopping basket is here</h2>
       </div>
     </div>
   );

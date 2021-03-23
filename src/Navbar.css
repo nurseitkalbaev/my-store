@@ -16,11 +16,15 @@
 .navbar__category {
   margin: 0px;
   margin-left: 20px;
-  /* border: 1px solid black; */
 }
 .navbar__category:hover {
   cursor: pointer;
 }
 .navbar__category button span:hover {
   border-bottom: 2px solid var(--primary);
+}
+@media (max-width: 768px) {
+  .navbar__category button {
+    font-size: 12px;
+  }
 }

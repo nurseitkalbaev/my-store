@@ -1,21 +1,30 @@
 .content {
   display: flex;
-  flex-wrap: wrap;
-
-  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
 }
 
-.content__row {
+.content__container {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-/* @media (max-width: 768px) {
-  .content__row {
-    display: block;
-    flex-wrap: wrap;
+.content__product {
+  display: flex;
+  width: 400px;
+}
+
+@media (max-width: 1024px) {
+  .content__product {
+    display: flex;
+    width: 250px;
   }
-} */
+}
+@media (max-width: 768px) {
+  .content__product {
+    display: flex;
+    width: 200px;
+  }
+}
